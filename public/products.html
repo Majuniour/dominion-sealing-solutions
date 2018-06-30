@@ -1,0 +1,217 @@
+<html ng-app="mainApp">
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Optimize mobile viewport -->
+
+    <title>Home</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <!-- SPELLS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <!-- load angular -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.17/angular-ui-router.js"></script>
+    <script src="javascripts/products.controller.js"></script>
+
+
+</head>
+
+<body ng-controller="mainController">
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="./images/dss1.png" style="width:20%;margin:0 20%">
+        <div class="navbar-brand">
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/aboutUs.html">About Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+        <br/>
+
+    
+
+   
+
+<!--       <legend><h5 class="display-4 headline"><center>CATEGORIES</center></h5></legend> -->
+
+
+        <div class="container marketing">
+
+            <!-- Three columns of text below the carousel -->
+
+
+            
+            <div class="card-group" >
+                <div class="card" ng-repeat="cat in categories" ng-model="cat" selected  ng-value="">
+                    
+                    <img class="card-img-top" src="./images/products/{{cat.image}}" alt="Card image cap">
+                    <div class="card-body">
+                    <h5 class="card-title" ng-click="cat.name">{{cat.name}}</h5>
+                        <p class="card-text">{{cat.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <br/>
+
+        <!--<h3 class="display-4 headline"><center>PRODUCTS</center></h3>-->
+        <div class="album py-5 bg-light" style="background-color: #e9ecef !important;">
+            <div class="container">
+                <div class="row">
+                        
+                    <div class="col-md-2" ng-repeat="product in products | filter:cat.name">
+                        <div class="card mb-4 box-shadow" style="height: 23em;">
+                            <img class="card-img-top" ng-src="./images/products/{{product.image}}" alt="Card image cap">
+                            <div class="card-body">
+                                <p class="lead" style="font-size:1rem;"><b>{{product.description}}</b></p>
+                                <p class="card-text" style="color:white;">{{product.name}}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <!--<div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    </div>-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- Footer -->
+<footer class="page-footer font-small stylish-color-dark pt-4 mt-4">
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left">
+  
+      <!-- Grid row -->
+      <div class="row">
+  
+        <!-- Grid column -->
+        <div class="col-md-4 mx-auto">
+  
+          <!-- Content -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Get In Touch</h5>
+          <p>We are here for you</p>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Address</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+                <a href="#!">96 Wildebees Street</a>
+              </li>
+              <li>
+                <a href="#!">Elspark Villa</a>
+              </li>
+              <li>
+                <a href="#!">Elspark Germiston</a>
+              </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Services</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">96 Wildebees Street</a>
+            </li>
+            <li>
+              <a href="#!">Elspark Villa</a>
+            </li>
+            <li>
+              <a href="#!">Elspark Germiston</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+        <hr class="clearfix w-100 d-md-none">
+  
+        <!-- Grid column -->
+        <div class="col-md-2 mx-auto">
+  
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Contact Us</h5>
+  
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Cell: 011 893 6010</a>
+            </li>
+          </ul>
+  
+        </div>
+        <!-- Grid column -->
+  
+      </div>
+      <!-- Grid row -->
+  
+    </div>
+    <!-- Footer Links -->
+  
+    <hr>
+  
+  
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/bootstrap-tutorial/"> sale@dominion.co.za</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+</body>
+
+
+
+</html>

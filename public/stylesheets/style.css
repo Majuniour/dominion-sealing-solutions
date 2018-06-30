@@ -1,0 +1,58 @@
+body {
+ background-color: #e9ecef;
+}
+
+.card{
+  background-color: #17a2b8 !important
+}
+
+.bg-light{
+  background-color: #ffffff!important
+}
+.navbar-light .navbar-nav .nav-link{
+  color: #17a2b8;
+}
+.navbar-nav{
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+  color: orange !important;
+}
+.carousel-caption {
+  color: black;
+}
+
+a {
+  color: #000000;
+}
+
+.headline{
+  color: #17a2b8;
+}
+
+.footer{
+    /* bottom: 0px; */
+    width: 100%;
+    height: auto;
+    line-height: 60px;
+    background-color: #17a2b8;
+    color: white;
+    /* margin-bottom: 16px; */
+    position: absolute;
+}
+.page-footer{
+  color: white;
+  background-color: var(--info);
+}
+.jumbotron{
+  background-color: white;
+}
+
+
+
+@media (min-width: 1200px){
+  .container {
+    max-width: 80% !important;
+  }
+}
