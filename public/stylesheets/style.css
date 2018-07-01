@@ -58,6 +58,11 @@ header{
 .jumbotron{
   background-color: white;
 }
+.card-title {
+  margin-bottom: .75rem;
+  font-weight: bold;
+  color: white;
+}
 
 
 
@@ -66,7 +71,7 @@ header{
     max-width: 80% !important;
   }
   .myLogo{
-    width: 25% !important;
+    width: 30% !important;
     position: relative;
     margin: 0 20%;
   }
