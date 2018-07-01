@@ -1,4 +1,10 @@
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+}
+
 body {
+ font-family: 'Roboto', sans-serif;
  background-color: #e9ecef;
 }
 
@@ -32,7 +38,9 @@ a {
 .headline{
   color: #17a2b8;
 }
-
+header{
+  background-color: white;
+}
 .footer{
     /* bottom: 0px; */
     width: 100%;
@@ -56,5 +64,10 @@ a {
 @media (min-width: 1200px){
   .container {
     max-width: 80% !important;
+  }
+  .myLogo{
+    width: 25% !important;
+    position: relative;
+    margin: 0 20%;
   }
 }
