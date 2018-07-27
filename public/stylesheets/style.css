@@ -8,9 +8,26 @@ body {
  background-color: #e9ecef;
 }
 
+.container{
+  background-color: #17a2b8;
+  padding: 10px;
+  font-style: bold;
+}
+
+.marketing{
+  background-color: #737373;
+}
+
 .card{
   background-color: #17a2b8 !important
 }
+
+.card-body{
+  background-color:#3b646bcf;
+  height: 6em;
+}
+
+
 
 .bg-light{
   background-color: #ffffff!important
