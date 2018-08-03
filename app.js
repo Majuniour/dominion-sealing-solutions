@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 
 
-var app = express();                              // create our app w/ express
+var app = express();                         // create our app w/ express
 var mongoose = require('mongoose');         // mongoose for mongodb
 var morgan = require('morgan');             // log requests to the console (express)
 var bodyParser = require('body-parser');    // pull information from HTML POST (express)
@@ -59,7 +59,7 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.set('ipaddr', process.env.IP || "0.0.0.0");
+app.set('ipaddr', process.env.IP || "localhost");
 app.set('port', process.env.PORT || "3000");
 
 

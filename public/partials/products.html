@@ -1,0 +1,22 @@
+<div class="album py-5 bg-light">
+    <div class="container marketing">
+        {{avm.category}}
+        <center><h3>P R O D U C T S</h3></center>
+        <div class="row">
+            <div class="col-md-3" ng-repeat="product in products">
+                <div class="card mb-4 box-shadow" style="height: 30em;">
+                    <img class="card-img-top" ng-src="./images/products/{{product.image}}" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="lead" style="font-size:1rem;"><b>{{product.description}}</b></p>
+                        <p class="card-text" style="color:white;"><b>{{product.name}}</b></p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!--<div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
