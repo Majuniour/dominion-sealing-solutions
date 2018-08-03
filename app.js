@@ -59,7 +59,7 @@ app.use(function(err, req, res, next) {
 });
 
 
-app.set('ipaddr', process.env.IP || "localhost");
+app.set('ipaddr', process.env.IP || "0.0.0.0");
 app.set('port', process.env.PORT || "3000");
 
 
